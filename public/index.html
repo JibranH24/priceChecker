@@ -10,6 +10,38 @@
     <title>Document</title>
 </head>
 <body>
+<form id="create user" onsubmit="processForm(this);return false;">
+    <div>
+        <label for="username">Username</label>
+        <input id="username" name="user_name" required/>
+    </div>
+    <div>
+        <label for="password">Password</label> 
+        <!-- make type = password -->
+        <input id="password" name="password" required/>
+    </div>
+    <div>
+        <label for="first name">First name</label>
+        <input id="first name" name="first_name" required/>
+    </div>
+    <div>
+        <label for="last name">Last name</label>
+        <input id="last name" name="last_name" required/>
+    </div>
     
+    
+    <div>
+        <label for="phone number">Phone Number</label>
+        <input id="phone number" name="phone_number" required/>
+    </div>
+
+    <div>
+        <label for="age">Age</label>
+        <input id="age" name="age" required/>
+    </div>
+    <div>
+        <button>Sign up</button>
+    </div>
+</form>
 </body>
 </html>
