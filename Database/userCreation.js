@@ -44,37 +44,37 @@ class User {
     // databaseClose(db);
 
 
-UpdateUser( 
-  username,
-  password,
-  first_name,
-  last_name,
-  age,
-  email,
-  phone_number){
+// UpdateUser( 
+//   username,
+//   password,
+//   first_name,
+//   last_name,
+//   age,
+//   email,
+//   phone_number){
    
-    // var db = databaseHandler.connect();
+//     // var db = databaseHandler.connect();
     
-        //change this SQL to UPDATE :) 
-    var sql =
-      `INSERT INTO User(username, password, first_name, last_name, age, email, phone_number)` +
-      `VALUES('${username}', '${password}', '${first_name}', '${last_name}', ${age},'${email}', ${phone_number}) WHERE ID = ${this.ID}`;
+//         //change this SQL to UPDATE :) 
+//     var sql =
+//       `INSERT INTO User(username, password, first_name, last_name, age, email, phone_number)` +
+//       `VALUES('${username}', '${password}', '${first_name}', '${last_name}', ${age},'${email}', ${phone_number}) WHERE ID = ${this.ID}`;
     
-      console.log(sql);
-      db.run(sql);
+//       console.log(sql);
+//       db.run(sql);
 
-    }
+//     }
   } 
 
 //Calling create new user function and can be called as many times as we want
   User.CreateNewUser(
-    "Samantha",
-    "TestPass123",
-    "Sam",
-    "Haigh",
-    26,
-    "samantha.haigh@multieverse.io",
-    123456678910
+    "Tonney",
+    "TestPast423",
+    "Tonney",
+    "Wincent",
+    27,
+    "Tonney.Wincent@multieverse.io",
+    98765432101,
   );
 
   Sam = new User();
