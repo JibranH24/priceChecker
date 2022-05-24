@@ -29,6 +29,7 @@ function close(db) {
 
 module.exports = {connect, close};
 
+
 // <!-- Sequalize failed connection -->
 // //Database Connection to Database file using specific libraries
 // const { Sequelize, DataTypes, Model } = require("sequelize");

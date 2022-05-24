@@ -1,3 +1,5 @@
+//const User = require('User')
+
 axios.get("https://api.coinstats.app/public/v1/coins?skip=0")
   .then(function (response) {
     return response.data;
@@ -54,24 +56,33 @@ axios.get("https://api.coinstats.app/public/v1/coins?skip=0")
 
 
 function processForm(form) {
-    axios.post('/', {
-    //   NAME: rname.value,
-    //   IMAGELINK: rurl.value,
-        //name:id.value,
-        username: user_name.value,
-        password: password.value,
-        firstname: first_name.value,
-        lastname: last_name.value,
-        phonenumber: phone_number.value,
-        age: age.value
-    })
-    .then(function (response) {
-      console.log(response);
-    })
-    .catch(function (error) {
-      console.log(error);
-    });
-   console.log(rname.value)
+  console.log(form.value);  
+
+  axios.post('http://localhost:3000/users', {
+    username: username.value,
+    password: password.value,
+    first_name:first_name.value,
+    last_name:last_name.value,
+    age:age.value,
+    email:email.value,
+    phone_number:phone_number.value    
+  })
+  .then(function (response) {
+    console.log(response);
+  })
+  .catch(function (error) {
+    console.log(error);
+  })
+
+  // User.CreateNewUser(
+  //     document.getElementById(username).value,
+  //     document.getElementById(password).value,
+  //     document.getElementById(first_name).value,
+  //     document.getElementById(last_name).value,
+  //     document.getElementById(email).value,
+  //     document.getElementById(phone_number).value,
+  //     document.getElementById(age).value
+  //   )
   }
     
 

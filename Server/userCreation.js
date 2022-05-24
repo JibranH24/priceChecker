@@ -1,5 +1,5 @@
 const sqlite3 = require("sqlite3");
-const databaseHandler = require("./database.js");
+// const databaseHandler = require("../Database/database.js");
 //user class object
 class User {
 
@@ -12,35 +12,27 @@ class User {
     email,
     phone_number
   ) {
-    const db = new sqlite3.Database(
-      "./Database/database.db",
-      sqlite3.OPEN_READWRITE,
-      (err) => {
-        if (err) {
-          return console.error(err.message);
-        } else {
-          console.log("Success!!");
-          return db;
-        }
-      }
-    );
-    // var db = databaseHandler.connect();
-    
-    var sql =
-      `INSERT INTO User(username, password, first_name, last_name, age, email, phone_number)` +
-      `VALUES('${username}', '${password}', '${first_name}', '${last_name}', ${age},'${email}', ${phone_number})`;
-    
-      console.log(sql);
-      db.run(sql);
+      axios.post('/Users', {
+        username: username,
+        password: password,
+        first_name:first_name,
+        last_name:last_name,
+        age:age,
+        email:email,
+        phone_number:phone_number
 
-      db.close((err) => {
-        if (err) {
-          return console.error(err.message);
-        } else {
-          console.log("db Closed");
-        }
-      });
-    }
+        
+      })
+      .then(function (response) {
+        console.log(response);
+      })
+      .catch(function (error) {
+        console.log(error);
+      })
+     console.log(rname.value)
+
+    
+  }
     // databaseClose(db);
 
 
@@ -68,6 +60,7 @@ UpdateUser(
 
 //Calling create new user function and can be called as many times as we want
   User.CreateNewUser(
+    
     "Samantha",
     "TestPass123",
     "Sam",
@@ -78,6 +71,9 @@ UpdateUser(
   );
 
   Sam = new User();
+
+
+  module.exports= User
   //Sam.UpdateUser(values...)
 
   
