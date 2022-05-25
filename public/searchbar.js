@@ -33,7 +33,7 @@ function updateCoinsHtml(coins){
       card.appendChild(coinName)
       
       const coinPrice = document.createElement("p")
-      coinPrice.innerHTML=`$${(coin.price).toFixed(2)}`
+      coinPrice.innerHTML=`£${((coin.price/10)*8).toFixed(2)}`
       card.appendChild(coinPrice)
 
       const websiteLink =document.createElement("a")
