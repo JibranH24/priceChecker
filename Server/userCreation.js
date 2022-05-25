@@ -12,7 +12,7 @@ class User {
     email,
     phone_number
   ) {
-      axios.post('/Users', {
+      axios.post('/users', {
         username: username,
         password: password,
         first_name:first_name,

@@ -5,13 +5,15 @@ const app = express();
 
 //Add Access Control Allow Origin headers
 app.use((req, res, next) => {
-    res.setHeader("Access-Control-Allow-Origin", "http://127.0.0.1:5500");
+    res.setHeader("Access-Control-Allow-Origin", "http://127.0.0.1:5501");
     res.header(
         "Access-Control-Allow-Headers",
         "Origin, X-Requested-With, Content-Type, Accept"
     );
     next();
 });
+
+//npm cors
 ///////////////////////////////////////  
 
 app.use(express.static('../public'));
@@ -42,15 +44,20 @@ app.post('/users', (req, res) => {
 
     db.run(sql, (err) => {
         if (err) {
+            res.status(400).send(err)
             return console.error(err.message);
         }
         else {
             console.log("Row Created!");
+            res.sendStatus(201);
         }
     });
 
+    
 
-    res.sendStatus(201);
+
+    
+
 })
 
 
