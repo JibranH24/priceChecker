@@ -2,14 +2,15 @@
     display:flex;
     flex-wrap: wrap;
   justify-content: center;
-    
-
+  /* background-color: rgb(255, 255, 248); */
 }
 .card{
     width:10rem;
     margin:40px;
     padding: 20px;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+    justify-content: center;
+   
 }
 
 .img{
@@ -19,7 +20,7 @@
 footer{
     background-color: black;
     height: 50vh;
-    color: gold;
+    color: beige;
     display:flex;
     justify-content: center;
 }

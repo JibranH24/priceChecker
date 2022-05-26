@@ -31,10 +31,34 @@ function updateCoinsHtml(coins){
       const coinName = document.createElement("p")
       coinName.innerHTML=coin.name
       card.appendChild(coinName)
-      
+
       const coinPrice = document.createElement("p")
       coinPrice.innerHTML=`£${((coin.price/10)*8).toFixed(2)}`
       card.appendChild(coinPrice)
+      
+      let minus = "-"
+
+      const oneDay = document.createElement("p")
+      oneDay.innerHTML=` 24h (£): ${((coin.priceChange1d/10)*8).toFixed(2)}`
+      oneDay.style.color="#90EE90"
+      if(oneDay.innerHTML.includes(minus)){
+        oneDay.style.color= "red"
+      }
+      else{
+        oneDay.innerHTML=` 24h (£): +${((coin.priceChange1d/10)*8).toFixed(2)}`
+      }
+       card.appendChild(oneDay)
+
+      const oneWeek = document.createElement("p")
+      oneWeek.innerHTML=` 7d (£): ${((coin.priceChange1w/10)*8).toFixed(2)}`
+      oneWeek.style.color="#90EE90"
+      if(oneWeek.innerHTML.includes(minus)){
+        oneWeek.style.color= "red"
+      }
+      else{
+        oneWeek.innerHTML=` 7d (£): +${((coin.priceChange1w/10)*8).toFixed(2)}`
+      }
+      card.appendChild(oneWeek)
 
       const websiteLink =document.createElement("a")
       var linkText = document.createTextNode("Website");
