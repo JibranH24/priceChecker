@@ -1,5 +1,6 @@
 const sqlite3 = require("sqlite3");
 
+
 function connect() {
   const db = new sqlite3.Database(
     "./Database/database.db",
@@ -27,6 +28,7 @@ function close(db) {
 
 //db.run("CREATE TABLE ResturantClass(ID INTEGER PRIMARY KEY AUTOINCREMENT,NAME TEXT NOT NULL,IMAGELINK TEXT NOT NULL)");
 
+//Exporting the connection and closure of the database
 module.exports = {connect, close};
 
 
