@@ -66,6 +66,13 @@ app.post('/users', (req, res) => {
 
 
 
+// AUTH
 
-
-
+app.post('/authenticate', (req, res) => {
+    // get the email and password from req.body
+    // try and select the row from the user database WHERE email matches
+    // check that the password in db is equal to the password in req.body
+    // if they match, res.sendStatus(200)
+    // if the row exists but passwords don't match res.sendStatus(403)
+    // if the does not exist want to res.setStatus of (404)
+})
