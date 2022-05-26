@@ -4,15 +4,20 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon">
     <script src ="../public/login-page.js"></script>
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
     <link rel="stylesheet" href="login-page.css"/>
     <link rel="main_page" href="index.html"/>
     
   
-    <title>Login page</title>
+    <title>MINT£D - Login</title>
 </head>
 <body>
-    <div class="limit">
+    <!-- <div class="limit">
         <div class="login-container">
             <div class="bb-login">
                 <form class="bb-form validate-form"> <span class="bb-form-title p-b-26"> Welcome to MINT£D </span> <span class="bb-form-title p-b-48"> <i class="mdi mdi-symfony"></i> </span>
@@ -28,11 +33,34 @@
                     </div>
                 </form>
                 <div class="bb-login-form-btn">
-                    <div class="bb-form-bgbtn"></div> <button class="bb-form-btn"><a class="txt2" href="/public/index.html"> Return to Mint£ed</a>
+                    <div class="bb-form-bgbtn"></div> <button class="bb-form-btn"><a class="txt2" href="/public/index.html"> Return to Mint£d</a>
                      </button>
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
+
+
+
+    <div class="sidenav">
+        <div class="login-main-text">
+           <h2>MINT£D</h2><br> <h4>Crypto may seem confusing, but we're here to help.</h4> 
+           <p>Login or <a href="register.html">sign up.</a></p>
+        </div>
+     </div>
+     <div class="main">
+        <div class="col-md-6 col-sm-12">
+           <div class="login-form">
+            <form>
+                <div class="form-group validate-input"  data-validate="Valid email is: a@b.c">
+                <label>Email</label>
+                <input type="text" class="form-control" name="email" placeholder="Enter Email">
+             </div> 
+             <div class="form-group validate-input" data-validate="Enter password" >
+                <label>Password</label>
+                <input type="password" class="form-control" name="pass" placeholder="Password">
+             </div>
+             <button class="btn btn-black"><a href="/public/index.html"> Login </a></button>
+            </form>
 </body>
 </html>

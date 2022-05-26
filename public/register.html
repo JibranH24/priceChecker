@@ -4,19 +4,25 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+    <link rel="stylesheet" href="register.css"/>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="../Script/script.js"></script>
-    <title>User sign up page</title>
+    <title>MINT£D - Register</title>
 </head>
 <body>
-    <form id="create_user" onsubmit="processForm(this);return false;">
+    <!-- <form id="create_user" onsubmit="processForm(this);return false;">
         <div>
             <label for="username">Username</label>
             <input id="username" name="user_name" required/>
         </div>
         <div>
             <label for="password">Password</label> 
-            <!-- make type = password -->
+           
             <input id="password" name="password" type="password" required/>
         </div>
         <div>
@@ -51,7 +57,56 @@
         <div class="bb-login-form-btn">
             <div class="bb-form-bgbtn"></div> <button class="bb-form-btn"><a class="txt2" href="/public/index.html"> Return to Mint£ed </a>
              </button>
-        </div>
+        </div> -->
+
+
+
+        <div class="sidenav">
+            <div class="login-main-text">
+               <h2>MINT£D</h2><br> <h4>Crypto may seem confusing, but we're here to help.</h4> 
+               <p>Already have an account? <a href="login-page.html">Log in</a></p>
+            </div>
+         </div>
+         <div class="main">
+            <div class="col-md-6 col-sm-12">
+               <div class="login-form">
+                <form id="create_user" onsubmit="processForm(this);return false;">
+                    <div class="form-group">
+                        <label for="username">Username</label>
+                        <input type="text" class="form-control" id="username" name="user_name" required/>
+                    </div> 
+                 <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" class="form-control" id="password" name="password" required/>
+                 </div>
+
+                 <div class="form-group validate-input">
+                    <label for="first_name">First name</label>
+                    <input class="form-control" id="first_name" name="first_name" required/>
+                 </div>
+
+                 <div class="form-group validate-input">
+                    <label for="last_name">Last name</label>
+                    <input type="text" class="form-control" id="last_name" name="last_name" required/>
+                 </div>
+
+                 <div class="form-group validate-input">
+                    <label for="email">Email</label>
+                    <input type="text" class="form-control" id="email" name="email" required/>
+                 </div>
+
+                 <div class="form-group validate-input">
+                    <label for="phone_number">Phone Number</label>
+                    <input type="text" class="form-control" id="phone_number" name="phone_number" required/>
+                 </div>
+
+                 <div class="form-group validate-input">
+                    <label for="age">Age</label>
+                    <input type="text" class="form-control" id="age" name="age" required/>
+                 </div>
+
+                 <button  id="signUp" class="btn btn-black"> Login</button>
+                </form>
 </body>
 
 </html>
