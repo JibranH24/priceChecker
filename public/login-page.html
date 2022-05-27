@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <link rel="icon" href="img/favicon.ico" type="image/x-icon">
     <script src ="../public/login-page.js"></script>
     <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
@@ -54,13 +55,13 @@
             <form>
                 <div class="form-group validate-input"  data-validate="Valid email is: a@b.c">
                 <label>Email</label>
-                <input type="text" class="form-control" name="email" placeholder="Enter Email">
+                <input  id="inputEmail" type="text" class="form-control" name="email" placeholder="Enter Email">
              </div> 
              <div class="form-group validate-input" data-validate="Enter password" >
                 <label>Password</label>
-                <input type="password" class="form-control" name="pass" placeholder="Password">
+                <input id="inputPassword" type="password" class="form-control" name="pass" placeholder="Password">
              </div>
-             <button class="btn btn-black"><a href="/public/index.html"> Login </a></button>
+             <button class="btn btn-black"><a href="/public/index.html" onclick="login(); return false" > Login </a></button>
             </form>
 </body>
 </html>
